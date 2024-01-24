@@ -5,4 +5,9 @@ public class ArrayUtils {
         System.out.println("Deneme 1 2");
     }
 
+    public static void printHello(){
+
+        System.out.println("Hello");
+    }
+
 }
