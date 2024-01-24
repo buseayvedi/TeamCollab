@@ -51,4 +51,9 @@ public class MainUtils {
     public static boolean isPastDate(LocalDate date) {
         return date.isBefore(LocalDate.now());
     }
+
+
+    public static void drink(){
+        System.out.println("Drinking water.");
+    }
 }
