@@ -1,6 +1,6 @@
 package interview_codes.arrays;
 
-public class FromOneTwoHundred {
+public class FromOneToHundred {
 
     public static void main(String[] args) {
 
