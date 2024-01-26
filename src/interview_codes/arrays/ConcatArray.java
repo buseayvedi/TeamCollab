@@ -10,6 +10,7 @@ public class ConcatArray {
 
         System.out.println(Arrays.toString(concatArrays(arr1, arr2)));
 
+
     }
     public static int[] concatArrays(int[] arr1, int[] arr2){
 
