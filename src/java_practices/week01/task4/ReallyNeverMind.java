@@ -1,4 +1,4 @@
-package java.week01.task4;
+package java_practices.week01.task4;
 
 public class ReallyNeverMind {
  /*

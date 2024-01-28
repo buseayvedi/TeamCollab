@@ -1,4 +1,4 @@
-package java.week01.task6;
+package java_practices.week01.task6;
 
 public class StartsWithX {
 /*

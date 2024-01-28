@@ -1,4 +1,4 @@
-package java.week01.task5;
+package java_practices.week01.task5;
 
 public class ReplaceX {
 /*

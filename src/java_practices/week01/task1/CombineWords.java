@@ -1,4 +1,4 @@
-package java.week01.task1;
+package java_practices.week01.task1;
 
 public class CombineWords {
     /*

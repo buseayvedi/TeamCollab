@@ -1,4 +1,4 @@
-package java.week01.bonusTask;
+package java_practices.week01.bonusTask;
 
 public class TipCalculator {
 /*
