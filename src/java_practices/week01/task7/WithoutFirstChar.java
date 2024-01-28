@@ -1,4 +1,4 @@
-package java.week01.task7;
+package java_practices.week01.task7;
 
 public class WithoutFirstChar {
 /*

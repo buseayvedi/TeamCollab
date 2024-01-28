@@ -1,4 +1,4 @@
-package java.week01.task3;
+package java_practices.week01.task3;
 
 public class EmailTask2 {
 /*
