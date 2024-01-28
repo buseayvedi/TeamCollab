@@ -12,4 +12,17 @@ public class CombineWords {
                 Output:
                      oneight
      */
+    public static void main(String[] args) {
+
+        System.out.println(combineWordsBuse("one", "eight"));
+        System.out.println(combineWordsBuse("java", "python"));
+
+    }
+    public static String combineWordsBuse(String str1, String str2){
+        if(str1.charAt(str1.length()-1) == str2.charAt(0)){
+            return str1+str2.substring(1);
+        }else{
+            return str1+str2;
+        }
+    }
 }
