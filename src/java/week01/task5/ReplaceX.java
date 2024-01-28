@@ -1,6 +1,6 @@
 package java.week01.task5;
 
-public class ReplaceX_Emir {
+public class ReplaceX {
 /*
 Create a method that accept a String.And replace all the x or X with character a.
 
