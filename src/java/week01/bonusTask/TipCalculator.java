@@ -1,6 +1,6 @@
 package java.week01.bonusTask;
 
-public class TipCalculator_Emir {
+public class TipCalculator {
 /*
     Write a program for a tip calculator.
     There will be different service quality benchmarks that will determine the tip given.

@@ -1,6 +1,6 @@
 package java.week01.task7;
 
-public class WithoutFirstChar_Emir {
+public class WithoutFirstChar {
 /*
  Create a method that can accept two Strings and combine them together.
  Print first String without its first character.
