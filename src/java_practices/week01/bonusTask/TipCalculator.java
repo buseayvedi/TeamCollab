@@ -3,10 +3,6 @@ package java_practices.week01.bonusTask;
 import java.util.Scanner;
 
 public class TipCalculator {
-
-    public static void method(){
-        System.out.println("test");
-    }
 /*
     Write a program for a tip calculator.
     There will be different service quality benchmarks that will determine the tip given.
@@ -47,6 +43,7 @@ public class TipCalculator {
 public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     tipCalculatorBuse(new Scanner(System.in));
+    tipCalculatorMelike(new Scanner(System.in));
 
 }
     public static void tipCalculatorBuse(Scanner scan){
@@ -94,5 +91,39 @@ public static void main(String[] args) {
             System.out.println("Invalid answer");
         }
 
+    }
+    public static void tipCalculatorMelike(Scanner input){
+
+        System.out.println("Split or No split (Yes or No)");
+        String yesNo = input.next().toLowerCase();
+
+        System.out.println("Enter the number of people: ");
+        int numberOfPeople = input.nextInt();
+
+        System.out.println("Enter check amount: ");
+        double amount = input.nextDouble();
+
+        System.out.println("How was the service quality? (Excellent * Great * Good * Fair * Poor");
+        String service = input.next().toLowerCase();
+
+        input.close();
+
+
+        double totalTip = (service.equals("excellent")) ? amount * 0.25
+                : (service.equals("great")) ? amount * 0.2
+                : (service.equals("good")) ? amount * 0.15
+                : (service.equals("fair")) ? amount * 0.1
+                : amount * 0.05;
+
+        double totalPay = amount + totalTip;
+
+        System.out.println("Number of people: " + numberOfPeople);
+        System.out.println("Total to pay: " + totalPay);
+        System.out.println("Total tip: " + totalTip);
+
+        if (yesNo.equals("yes")) {
+            System.out.println("Total per person: " + (totalPay / numberOfPeople));
+            System.out.println("Tip per person: " + (totalTip / numberOfPeople));
+        }
     }
 }
