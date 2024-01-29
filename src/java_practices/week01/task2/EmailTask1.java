@@ -66,10 +66,15 @@ public class EmailTask1 {
 
         email = email.trim();
 
-        String firstname = email.substring(0, email.indexOf("_")),
-                lastname = email.substring(firstname.length() + 1, email.indexOf("@"));
+        if(!email.contains("_")){
+            System.out.println(email);
+        }else {
+            String firstname = email.substring(0, email.indexOf("_")),
+                    lastname = email.substring(firstname.length() + 1, email.indexOf("@"));
 
-        System.out.println(lastname+"_"+firstname+"@"+email.substring(email.indexOf("@")+1));
+            System.out.println(lastname + "_" + firstname + "@" + email.substring(email.indexOf("@") + 1));
+
+        }
     }
 }
 
