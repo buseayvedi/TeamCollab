@@ -50,6 +50,9 @@ public class CombineWords {
 
     public static void combineWordsEmir(String str1, String str2){
 
+        str1 = str1.trim();
+        str2 = str2.trim();
+
         String letter = str1.substring(str1.length()-1);
 
         if(str1.endsWith(letter) && str2.startsWith(letter)){

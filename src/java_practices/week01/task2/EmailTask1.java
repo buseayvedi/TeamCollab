@@ -48,6 +48,8 @@ public class EmailTask1 {
 
     public static void swapNamesInEmailEmir(String email){
 
+        email = email.trim();
+
         if(!email.contains("_")){
             System.out.println(email);;
         }else {

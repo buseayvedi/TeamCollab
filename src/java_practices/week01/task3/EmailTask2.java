@@ -44,6 +44,8 @@ public class EmailTask2 {
 
     public static void displayEmailInfoEmir(String email){
 
+        email = email.trim();
+
         String firstname = email.substring(0, email.indexOf("_")),
                 lastname = email.substring(firstname.length() + 1, email.indexOf("@")),
                 domain = email.substring(email.indexOf("@")+1,email.indexOf(".")),
