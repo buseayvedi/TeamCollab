@@ -1,7 +1,5 @@
 package java_practices.week01.task2;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 public class EmailTask1 {
     /*
 
@@ -19,7 +17,9 @@ public class EmailTask1 {
 
         System.out.println(swapNamesInEmail("melike_cora@gmail.com"));
         System.out.println(swapNamesInEmail("melikecora@gmail.com"));
-
+        System.out.println(swapNamesInEmailBuse("buseayvedi@gmail.com"));
+        System.out.println(swapNamesInEmailBuse("buse_ayvedi@gmail.com"));
+//        System.out.println(swapNamesInEmailBuse("buseayvedigmail.com"));
         swapNamesInEmailEmir("emir_yazici@gmail.com");
         swapNamesInEmailEmir("emiryazici@gmail.com");
 
@@ -46,19 +46,40 @@ public class EmailTask1 {
 
     }
 
+    public static String swapNamesInEmailBuse(String email){
+
+        if (!(email.contains("@"))){
+            throw new RuntimeException("Wrong email format");
+        }
+        boolean containsUnderScore = email.substring(0, email.indexOf('@')).contains("_");
+        if (containsUnderScore){
+            String name = email.substring(0, email.indexOf("_"));
+            String surname = email.substring(email.indexOf("_")+1, email.indexOf("@"));
+            return surname+"_"+name+email.substring(email.indexOf("@"));
+        }else {
+            return email;
+        }
+
+    }
+
     public static void swapNamesInEmailEmir(String email){
 
         email = email.trim();
 
-        if(!email.contains("_")){
-            System.out.println(email);;
-        }else {
-            String firstname = email.substring(0, email.indexOf("_")),
-                    lastname = email.substring(firstname.length() + 1, email.indexOf("@"));
+        String firstname = email.substring(0, email.indexOf("_")),
+                lastname = email.substring(firstname.length() + 1, email.indexOf("@"));
 
-            System.out.println(lastname+"_"+firstname+"@"+email.substring(email.indexOf("@")+1));
-        }
+        System.out.println(lastname+"_"+firstname+"@"+email.substring(email.indexOf("@")+1));
     }
 }
+
+
+
+
+
+
+
+
+
 
 
