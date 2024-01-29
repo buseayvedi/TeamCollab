@@ -1,5 +1,7 @@
 package java_practices.week01.task2;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class EmailTask1 {
     /*
 
@@ -18,8 +20,8 @@ public class EmailTask1 {
         System.out.println(swapNamesInEmail("melike_cora@gmail.com"));
         System.out.println(swapNamesInEmail("melikecora@gmail.com"));
 
-        System.out.println(swapNamesInEmailEmir("emir_yazici@gmail.com"));
-        System.out.println(swapNamesInEmailEmir("emiryazici@gmail.com"));
+        swapNamesInEmailEmir("emir_yazici@gmail.com");
+        swapNamesInEmailEmir("emiryazici@gmail.com");
 
     }
 
@@ -44,18 +46,17 @@ public class EmailTask1 {
 
     }
 
-    public static String swapNamesInEmailEmir(String email){
+    public static void swapNamesInEmailEmir(String email){
 
         if(!email.contains("_")){
-            return email;
+            System.out.println(email);;
+        }else {
+            String firstname = email.substring(0, email.indexOf("_")),
+                    lastname = email.substring(firstname.length() + 1, email.indexOf("@"));
+
+            System.out.println(lastname+"_"+firstname+"@"+email.substring(email.indexOf("@")+1));
         }
-
-        String firstname = email.substring(0,email.indexOf("_")),
-                lastname = email.substring(firstname.length()+1,email.indexOf("@"));
-
-        return lastname+"_"+firstname+"@"+email.substring(email.indexOf("@")+1);
     }
-
 }
 
 
