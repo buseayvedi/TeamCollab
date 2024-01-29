@@ -12,4 +12,25 @@ public class EmailTask1 {
             input: mike_tyson@gmail.com
             output: tyson_mike@gmail.com
  */
+
+    public static String swapNamesInEmail(String email){
+
+        String [] arrEmailComponent = email.split("@");
+
+        if(arrEmailComponent.length <= 1){
+            return email;
+        }
+
+        String [] arrName = arrEmailComponent[0].split("_");
+
+        if(arrName.length <= 1){
+            return email;
+        }
+
+        return arrName[1] + "_" + arrName[0] + "@" + arrEmailComponent[1];
+
+    }
+
 }
+
+
