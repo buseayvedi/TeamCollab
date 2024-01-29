@@ -1,6 +1,10 @@
 package java_practices.week01.bonusTask;
 
 public class TipCalculator {
+
+    public static void method(){
+        System.out.println("test");
+    }
 /*
     Write a program for a tip calculator.
     There will be different service quality benchmarks that will determine the tip given.

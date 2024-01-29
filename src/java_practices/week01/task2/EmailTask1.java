@@ -20,6 +20,8 @@ public class EmailTask1 {
         System.out.println(swapNamesInEmailBuse("buseayvedi@gmail.com"));
         System.out.println(swapNamesInEmailBuse("buse_ayvedi@gmail.com"));
 //        System.out.println(swapNamesInEmailBuse("buseayvedigmail.com"));
+        swapNamesInEmailEmir("emir_yazici@gmail.com");
+        swapNamesInEmailEmir("emiryazici@gmail.com");
 
     }
 
@@ -60,6 +62,24 @@ public class EmailTask1 {
 
     }
 
+    public static void swapNamesInEmailEmir(String email){
+
+        email = email.trim();
+
+        String firstname = email.substring(0, email.indexOf("_")),
+                lastname = email.substring(firstname.length() + 1, email.indexOf("@"));
+
+        System.out.println(lastname+"_"+firstname+"@"+email.substring(email.indexOf("@")+1));
+    }
 }
+
+
+
+
+
+
+
+
+
 
 
