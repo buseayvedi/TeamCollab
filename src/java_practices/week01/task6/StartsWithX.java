@@ -13,4 +13,19 @@ Example;
                         acodex
 
  */
+
+    public static void main(String[] args) {
+
+        System.out.println(startWithXMelike("xcodex"));
+    }
+
+    public static String startWithXMelike(String str){
+
+        if(str.startsWith("x")){
+            return "a" + str.substring(1);
+        }else{
+            return str;
+        }
+
+    }
 }
