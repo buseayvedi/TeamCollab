@@ -24,16 +24,19 @@ public class EmailTask1 {
 
         String[] arrEmailComponent = email.split("@");
 
+        // if email does not contain "@" return email
         if (arrEmailComponent.length <= 1) {
             return email;
         }
 
         String[] arrName = arrEmailComponent[0].split("_");
 
+        // if email does not contain "_" return email
         if (arrName.length <= 1) {
             return email;
         }
 
+        // Swap name and concat other parts of email
         return arrName[1] + "_" + arrName[0] + "@" + arrEmailComponent[1];
 
     }
