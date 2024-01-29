@@ -25,4 +25,19 @@ public class CombineWords {
             return str1+str2;
         }
     }
+
+    public static String combineWordsMelike(String str1, String str2){
+
+        String result = "";
+
+        if(str1.charAt(str2.length()-1) == str2.charAt(0)){
+            result = str1.substring(0,str1.length())+ str2;
+        }else{
+            result = str1 + str2;
+        }
+
+        return result;
+
+    }
+
 }
