@@ -17,6 +17,9 @@ public class EmailTask1 {
 
         System.out.println(swapNamesInEmail("melike_cora@gmail.com"));
         System.out.println(swapNamesInEmail("melikecora@gmail.com"));
+        System.out.println(swapNamesInEmailBuse("buseayvedi@gmail.com"));
+        System.out.println(swapNamesInEmailBuse("buse_ayvedi@gmail.com"));
+//        System.out.println(swapNamesInEmailBuse("buseayvedigmail.com"));
 
     }
 
@@ -38,6 +41,22 @@ public class EmailTask1 {
 
         // Swap name and concat other parts of email
         return arrName[1] + "_" + arrName[0] + "@" + arrEmailComponent[1];
+
+    }
+
+    public static String swapNamesInEmailBuse(String email){
+
+        if (!(email.contains("@"))){
+            throw new RuntimeException("Wrong email format");
+        }
+        boolean containsUnderScore = email.substring(0, email.indexOf('@')).contains("_");
+        if (containsUnderScore){
+            String name = email.substring(0, email.indexOf("_"));
+            String surname = email.substring(email.indexOf("_")+1, email.indexOf("@"));
+            return surname+"_"+name+email.substring(email.indexOf("@"));
+        }else {
+            return email;
+        }
 
     }
 
