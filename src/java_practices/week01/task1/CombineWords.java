@@ -17,6 +17,9 @@ public class CombineWords {
         System.out.println(combineWordsBuse("one", "eight"));
         System.out.println(combineWordsBuse("java", "python"));
 
+        System.out.println(combineWordsMelike("melike", "emir"));
+        System.out.println(combineWordsMelike("melike", "buse"));
+
     }
     public static String combineWordsBuse(String str1, String str2){
         if(str1.charAt(str1.length()-1) == str2.charAt(0)){
@@ -25,4 +28,19 @@ public class CombineWords {
             return str1+str2;
         }
     }
+
+    public static String combineWordsMelike(String str1, String str2){
+
+        String result = "";
+
+        if(str1.charAt(str1.length()-1) == str2.charAt(0)){
+            result = str1.substring(0,str1.length()-1)+ str2;
+        }else{
+            result = str1 + str2;
+        }
+
+        return result;
+
+    }
+
 }
