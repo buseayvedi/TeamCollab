@@ -15,4 +15,28 @@ public class EmailTask2 {
                    Last name: Federighi
                    Domain: apple
 */
+
+    public static void main(String[] args) {
+
+        displayEmailInfoMelike("craig_federighi@apple.com");
+    }
+
+    public static void displayEmailInfoMelike(String email){
+
+        String firstName = formatName(email.substring(0,email.indexOf('_')));
+        String lastName = formatName(email.substring(email.indexOf('_')+1, email.indexOf('@')));
+        String domain = email.substring(email.indexOf('@')+1,email.indexOf('.'));
+
+        System.out.println("First name = " + firstName);
+        System.out.println("Last name = " + lastName);
+        System.out.println("Domain = " + domain);
+    }
+
+    public static String formatName(String str){
+
+        return str.substring(0,1).toUpperCase() + str.substring(1).toLowerCase();
+
+
+    }
+
 }
