@@ -20,6 +20,11 @@ public class CombineWords {
         System.out.println(combineWordsMelike("melike", "emir"));
         System.out.println(combineWordsMelike("melike", "buse"));
 
+        combineWordsEmir("one","eight");
+        combineWordsEmir("fuat","tarik");
+        combineWordsEmir("nazim","hikmet");
+
+
     }
     public static String combineWordsBuse(String str1, String str2){
         if(str1.charAt(str1.length()-1) == str2.charAt(0)){
@@ -43,4 +48,17 @@ public class CombineWords {
 
     }
 
+    public static void combineWordsEmir(String str1, String str2){
+
+        str1 = str1.trim();
+        str2 = str2.trim();
+
+        String letter = str1.substring(str1.length()-1);
+
+        if(str1.endsWith(letter) && str2.startsWith(letter)){
+            System.out.println(str1.replace(""+str1.charAt(str1.lastIndexOf(letter)),"")+str2);
+        }else {
+            System.out.println(str1+str2);
+        }
+    }
 }
