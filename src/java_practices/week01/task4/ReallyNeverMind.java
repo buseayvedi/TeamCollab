@@ -11,6 +11,10 @@ Create a method that accept a String.If the String ends with "ly", print "really
         reallyNeverMindMelike("melike");
         reallyNeverMindMelike("m");
 
+        reallyNeverMindEmir("kelly");
+        reallyNeverMindEmir("SILLY");
+        reallyNeverMindEmir("roberTo");
+
     }
 
     public static void reallyNeverMindMelike(String str){
@@ -27,6 +31,18 @@ Create a method that accept a String.If the String ends with "ly", print "really
         }catch (StringIndexOutOfBoundsException e){
             System.out.println(str);
         }
+    }
+
+    public static void reallyNeverMindEmir(String str){
+
+        str = str.trim();
+
+        if(str.toLowerCase().endsWith("ly")){
+            System.out.println("really???");
+        }else {
+            System.out.println("never mind");
+        }
+
     }
 
 }
