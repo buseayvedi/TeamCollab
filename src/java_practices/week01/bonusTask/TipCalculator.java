@@ -114,6 +114,8 @@ public static void main(String[] args) {
                 : (service.equals("good")) ? amount * 0.15
                 : (service.equals("fair")) ? amount * 0.1
                 : amount * 0.05;
+        //Kahskaal
+        //lAJKSALHJLqdj
 
         double totalPay = amount + totalTip;
 
