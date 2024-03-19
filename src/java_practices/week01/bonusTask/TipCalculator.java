@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class TipCalculator {
 /*
+;SADLKL;DSK
+AS;LDKJL;adksl
+aL;SK;SAD';LSX
     Write a program for a tip calculator.
     There will be different service quality benchmarks that will determine the tip given.
     There will also the ability to calculate based on the number of people in the party and if there is a split of the bill or not.
